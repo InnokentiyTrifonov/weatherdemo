@@ -12,14 +12,14 @@ class FinalWeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 0, 0),
+        scaffoldBackgroundColor: Color.fromARGB(255, 26, 26, 26),
         textTheme: const TextTheme(
           // style of city name and temp
           labelLarge: TextStyle(
-              color: Colors.white, fontSize: 40, fontWeight: FontWeight.w900),
+              color: Colors.white, fontSize: 50, fontWeight: FontWeight.w900),
           // style of weather description
           labelMedium: TextStyle(
-              color: Colors.white, fontSize: 40, fontWeight: FontWeight.w800),
+              color: Colors.white, fontSize: 30, fontWeight: FontWeight.w800),
           // style of date, wind, humidity and wind direction widgets
           labelSmall: TextStyle(
               color: Colors.white, fontSize: 17, fontWeight: FontWeight.w600),
