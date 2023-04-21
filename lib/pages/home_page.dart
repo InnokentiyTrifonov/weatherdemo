@@ -28,6 +28,8 @@ class _HomePageState extends State<HomePage> {
   late Future<WeatherResponse> futureWeather;
   String? location;
 
+  void backGroundImage() {}
+
   @override
   void initState() {
     super.initState();
@@ -46,21 +48,6 @@ class _HomePageState extends State<HomePage> {
     });
     fetch();
   }
-
-  /*void _showdialog() {
-    showCupertinoDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              content: const Text('No internet connection'),
-              actions: [
-                FloatingActionButton(
-                    child: const Text('OK'),
-                    onPressed: () => SystemChannels.platform
-                        .invokeMethod('Systemnavigator.pop')),
-              ],
-            ));
-  }
-  */
 
   @override
   Widget build(BuildContext context) {
@@ -85,13 +72,13 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Container(
                               width: size.width,
-                              height: size.height * 0.75,
+                              height: size.height * 0.79,
                               padding: const EdgeInsets.only(top: 50),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(40),
-                                  image: const DecorationImage(
-                                      image:
-                                          AssetImage('assets/background.jpg'),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/${data.currentCondition[0].weatherDesc[0].value}.jpg'),
                                       fit: BoxFit.cover)),
                               child: Column(
                                 children: [
